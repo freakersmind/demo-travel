@@ -1,0 +1,46 @@
+{% extends "index/base.html" %}
+{% block blkContent %}
+
+<div class="container">
+	{% for travel in travel_history %}
+		<div class="row row-bottom">
+			<div class="col-md-6 div-block">
+			  <div class="slider-inner">
+			    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			      <ol class="carousel-indicators">
+			        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			      </ol>
+			      <div class="carousel-inner">
+			      	{% for im in travel.travel_images.all %}
+				        <div class="carousel-item{% if forloop.first %} active{% endif %}"> 
+				          <img class="d-block w-100" src="{{ im.images.url }}">
+				        </div>
+			        {% endfor %}
+			      </div>
+			      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			        <span class="sr-only">Previous</span>
+			      </a>
+			      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			        <span class="sr-only">Next</span>
+			      </a>
+			    </div>
+			  </div>				
+			</div>
+			<div class="col-md-6 div-block">
+        <div class="listing-sec">
+          <ul>
+          	<li><b>Country</b> {{travel.country}}</li>
+            <li><b>Location</b> {{travel.location}}</li>
+            <li><b>Date Visited</b> {{travel.date_visited}}</li>
+            <li><b>Activitity performed</b> {{travel.activities_performed}}</li>
+          </ul>
+        </div>
+			</div>
+		</div>
+	{% endfor %}
+</div>
+{% endblock blkContent %}
