@@ -1,0 +1,8 @@
+<form #form="ngForm">
+<mat-form-field color="accent" style="width:100%">
+  <input matInput placeholder="Search something" [(ngModel)]="search" required name="search">
+  <button mat-icon-button matSuffix (click)="search = ''" matTooltip="Clear input"><mat-icon>cancel</mat-icon></button>
+  <mat-error>This is required.</mat-error>
+</mat-form-field>
+<button mat-button color="primary" (click)="submit()" [disabled]="form.invalid">Submit</button>
+</form>
