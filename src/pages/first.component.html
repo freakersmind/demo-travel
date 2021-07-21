@@ -1,0 +1,42 @@
+<mat-nav-list>
+  <a mat-list-item *ngFor="let link of links" [href]="link.href" target="_blank">
+    <mat-icon *ngIf="link.icon">{{link.icon}}</mat-icon>
+    <p matLine>{{link.title}}</p>
+  </a>
+  <button (click)="getUsers()">Get users</button>
+</mat-nav-list>
+  
+
+<carousel  [cellsToShow]="1" [height]="550"
+    [images]="images"
+    [cellWidth]="'100%'"
+    [arrowsOutside]="true"
+    [autoplay]="true"
+    [dots]="true"
+    [loop]="true">
+</carousel>
+
+  <div class="content-sec">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 div-block">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+          
+        <div class="col-md-6 div-block">
+          <div class="content-sec-inner">
+            <div class="form-group div_id_100">
+              <label for="exampleFormControlSelect1">Check out some of the places I've visited</label>
+              <!--ngFor select-->
+              <select class="form-control" id="countryselect">
+                <option value="select"> Select Country </option>
+                <!-- {% for country in countries %} -->
+                  <option value="1">India</option>
+              </select>
+            </div>
+            <input type="button" name="Submit" class="submit-button" value="Submit" class="btn btn-default">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
