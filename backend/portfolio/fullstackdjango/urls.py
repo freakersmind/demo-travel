@@ -21,7 +21,10 @@ from travel_history import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
+    # frontend
     path('home_data', views.home_data, name='home_data'),
     path('travel-history/', views.travel_history, name='travel_history'),
     path('travel-history-details/<int:country_id>', views.travel_history_details, name='travel_history_details'),
+    #frontend
+    path('travel-details/<int:country_id>', views.travel_details, name='travel_details'),
 ]
