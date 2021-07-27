@@ -61,15 +61,3 @@ body {
 .row-bottom{
 	margin-bottom: 3%;
 }
-.flex-container {
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-.flex-container > div {
-  background-color: #f1f1f1;
-  width: 800%;
-  margin: 10px;
-  text-align: center;
-  font-size: 12px;
-}

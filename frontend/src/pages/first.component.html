@@ -5,3 +5,33 @@
   </a>
   <button (click)="getUsers()">Get users</button>
 </mat-nav-list>
+  
+
+<carousel  [cellsToShow]="1" [height]="550"
+    [images]="images"
+    [cellWidth]="'100%'"
+    [autoplay]="true"
+    [dots]="true"
+    [loop]="true">
+</carousel>
+<div class="flex-container">
+  <div><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+    when an unknown printer took a galley of type and scrambled it to make a type 
+    specimen book. It has survived not only five centuries, but also the leap into 
+    electronic typesetting, remaining essentially unchanged. It was popularised in 
+    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+    and more recently with desktop publishing software like Aldus PageMaker including 
+    versions of Lorem Ipsum.</p></div>
+  <div>
+    <label for="exampleFormControlSelect1">Check out some of the places I've visited</label>
+    <!--ngFor select-->
+    <select class="form-control" id="countryselect">
+      <option value="select"> Select Country </option>
+      <!-- {% for country in countries %} -->
+        <option value="1">India</option>
+    </select>
+  </div>
+  <input type="button" name="Submit" class="submit-button" value="Submit" class="btn btn-default">
+</div>
+  
