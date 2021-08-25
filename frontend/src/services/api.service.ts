@@ -31,9 +31,20 @@ export class ApiService {
         return throwError(err);
     }
 
-    // get users
-    async GetUsers() {
-        let data = await this.http.get<any>("https://jsonplaceholder.typicode.com/users")
+    // get countries
+    async GetCountries() {
+        let data = await this.http.get<any>("https://freakersmind.pythonanywhere.com/home_data")
+            .pipe(
+                retry(1),
+                await catchError(this.errorHandler)
+            ).toPromise();
+        return data;
+    }
+
+    // fetch country details
+    async GetCountryDetails(country_id) {
+        let data = await this.http.get<any>("https://freakersmind.pythonanywhere.com/travel-details"+ '/'
+        + country_id)
             .pipe(
                 retry(1),
                 await catchError(this.errorHandler)
