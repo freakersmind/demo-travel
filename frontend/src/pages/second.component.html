@@ -1,3 +1,34 @@
-<p>This is the second page with some content here.</p>
 
-<span [innerHTML]="loremipsum"></span>
+
+<table align="center">
+    <tr *ngFor="let country of countryDetails">
+        <td style="padding-top: 40px">
+            <carousel 
+                [cellsToShow]="1" 
+                [width]="540"
+                [height]="300"
+                [images]="country.travel_images__images_list"
+                [autoplay]="true"
+                [dots]="true"
+                [arrows]="false"
+                [loop]="true">
+            </carousel>
+        </td>
+        <td>
+            <ul style="list-style-position: inside;">
+                <li>
+                    <span><strong>Country</strong></span> {{country.country}}
+                </li>
+                <li>
+                    <span><strong>Location</strong></span> {{country.location}}
+                </li>
+                <li>
+                    <span><strong>Date visited</strong></span> {{country.date_visited}}
+                </li>
+                <li>
+                    <span><strong>Activitity performed</strong></span> {{country.activities_performed}}
+                </li>
+            </ul>
+        </td>
+    </tr>
+</table>
