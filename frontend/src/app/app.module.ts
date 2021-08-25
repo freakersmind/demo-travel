@@ -5,10 +5,13 @@ import { APP_BASE_HREF, CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   MatButtonModule,
+  MatCardModule,
+  MatCheckboxModule,
   MatFormFieldModule,
   MatIconModule,
   MatInputModule,
   MatListModule,
+  MatSelectModule,
   MatTabsModule,
   MatToolbarModule,
   MatTooltipModule
@@ -23,13 +26,14 @@ import {
 } from '../pages/pages.component';
 import { ApiService } from 'src/services/api.service';
 import { HttpClientModule } from '@angular/common/http';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 /**
  * The app routes
  */
 const APP_ROUTES: Routes = [
-  { path: 'first', component: FirstPageComponent },
-  { path: 'second', component: SecondPageComponent },
+  { path: '', component: FirstPageComponent },
+  { path: 'second/:id', component: SecondPageComponent },
   { path: 'third', component: ThirdPageComponent },
   { path: 'search', component: SearchPageComponent }
 ]
@@ -48,12 +52,16 @@ const MATERIAL_MODULES = [
 ]
 @NgModule({
   exports: [MATERIAL_MODULES],
-  imports: [MATERIAL_MODULES]
+  imports: [MATERIAL_MODULES, BrowserAnimationsModule]
 })
 export class MaterialModule { }
 
 @NgModule({
   imports: [
+    MatSelectModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    IvyCarouselModule,
     BrowserModule,
     CommonModule,
     MaterialModule,
@@ -61,7 +69,8 @@ export class MaterialModule { }
     ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    RouterModule.forRoot(APP_ROUTES)
+    RouterModule.forRoot(APP_ROUTES),
+    MatCardModule
   ],
   declarations: [
     AppComponent,
