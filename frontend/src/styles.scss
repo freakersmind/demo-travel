@@ -72,4 +72,31 @@ body {
   margin: 10px;
   text-align: center;
   font-size: 12px;
+  padding: 80px 0;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.exampleContainer {
+  margin: 1em;
+  display: flex;
+  flex-direction: row;
+  width: 55em;
+  border: 5px solid #FFF;
+  min-height: 20em;
+  align-items: flex-start;
+}
+
+.example{
+  justify-content: center;
+  font-weight: bold;
+  color: #FFF;
+  border-color: #FFF;
+  border-style: solid;
+  border-width: 0px;
+  min-height: 4em;
+  min-width: 8em;
+  display: flex;
+  align-items: center;
+  
 }
