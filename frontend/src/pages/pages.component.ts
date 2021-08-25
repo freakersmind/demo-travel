@@ -93,7 +93,6 @@ export class SecondPageComponent implements OnInit {
               .travel_images__images_list.push(imgPath);
         }
       });
-      alert(JSON.stringify(this.countryDetails));
     }
   }
 }
