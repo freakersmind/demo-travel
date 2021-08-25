@@ -13,6 +13,7 @@
     "@angular/platform-browser": "^8.2.14",
     "@angular/platform-browser-dynamic": "^8.2.14",
     "@angular/router": "^8.2.14",
+    "angular-responsive-carousel": "^2.1.2",
     "core-js": "2",
     "hammerjs": "^2.0.8",
     "node-sass": "^4.14.1",
