@@ -75,7 +75,6 @@ export class SecondPageComponent implements OnInit {
             let modElem =element;
             modElem['travel_images__images_list'] = [];
             let imgPath = {path: null};
-            debugger;
             imgPath.path = '../assets/'+element.travel_images__images
               .substring(element.travel_images__images.indexOf('traveled_places')+16
                 , element.travel_images__images.length);
@@ -84,7 +83,6 @@ export class SecondPageComponent implements OnInit {
             this.countryDetails.push(modElem);
         }else{
           let imgPath = {path: null};
-          debugger;
           imgPath.path = '../assets/'+element.travel_images__images
             .substring(element.travel_images__images.indexOf('traveled_places')+16
               , element.travel_images__images.length);
